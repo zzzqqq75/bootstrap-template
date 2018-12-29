@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
  <!-- for internet explorer browser	 -->
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <!-- for mobile meta -->
@@ -19,41 +21,64 @@
  		/*height: 800px;*/
  	}
  	body{
+ 		font-family:  sans-serif;
  		
+    	
  	}
- 	#mar{
- 		padding-top: 130px;
- 		font-size: 57px;
 
+ 	/* Extra small devices (phones, up to 480px) */
+	/*@media screen and (max-width: 767px) {#title{font-size: 100px;}}*/
+
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: 768px) and (max-width: 991px) 
+	{#title{font-size: 57px;} #sub-title{font-size: 25px;}}
+
+ 	/*tablets/desktops and up ----------- */
+	@media (min-width: 992px) /*and (max-width: 1199px) */
+	{#title{font-size: 57px;} #sub-title{font-size: 25px;}}
+
+	/* large desktops and up ----------- */
+	/*@media screen and (min-width: 1200px) {}*/
+
+ 	#title{
+ 		/*padding-top: 130px;*/
+ 		/*font-size: 57px;*/
+ 		/*font-size: 4.5vw;*/
  	}
+ 	#sub-title{
+ 		/*font-size: 25px;*/
+ 		/*text-align: center;*/
+ 	}
+
  	#bg{
- 		width: 100%;
  		background : linear-gradient(330deg,#EA3491,#673A92);
- 		overflow: hidden;
- 		
  	}
 
  	#fn{
  		
  	}
+
+
+
+
 </style>
 </head>
 <body>
 <div class="container-fluid p-0">
-	<div id="bg" class="container-fluid ">
-
+	<div id="bg" class="container-fluid">
 		
-		<p id="mar" class="text-center text-white ">Mobile App Landing Page Template</p>
-			
-		<p style="font-size: 23px;" class="text-center text-white font-weight-light">The one and only solution for any kind of mobila app landing needs. Just <br><b>change</b> the screenshots and texts and you are good to go.</p>
-		<!-- <h1 class="col text-center">asfsafasfsaf</h1> -->
-		
-		<img src="iiii.png" class="mx-auto d-block" >
-
-
+		<div class="pt-5 ">
+			<h1 id="title" class="text-center text-white w-100 pt-5 pb-4">Mobile App Landing Page Template</h1>
 		</div>
-	</div>
 
+		<div class="col-md-9 col-md-offset-4 mx-auto">
+			<p id="sub-title" class="text-white">The one and only solution for any kind of mobila app landing needs. Just change the screenshots and texts and you are good to go.</p>
+		</div>
+		
+			<img src="iiii.png" class="img-fluid mx-auto d-block" >
+		</div>
+			
+	<img src="client-logos.png" class="img-fluid mx-auto d-block mt-5">
 
 </div>
  <script src="js/jquery.js"></script>
