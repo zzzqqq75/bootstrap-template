@@ -2,86 +2,307 @@
 <html>
 <head>
 
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
- <!-- for internet explorer browser	 -->
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <!-- for mobile meta -->
- <meta name="viewport" content="width=device-width, initial-scale=1">		
- 
- <link rel="stylesheet" href="css/bootstrap.css">
- <!-- <link rel="stylesheet" href="css/1.css"> -->
- <!-- for IE to support ex. nav bar -->
- <script src="js/html5shiv.min.js"></script>
- <script src="js/respond.min.js"></script>
 
- <style>
- 	*{
- 		/*width: 1000px;*/
- 		/*background: darkred;*/
- 		/*height: 800px;*/
- 	}
- 	body{
- 		font-family:  sans-serif;
- 		
-    	
- 	}
+	<!-- for internet explorer browser	 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- for mobile meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">		
 
- 	/* Extra small devices (phones, up to 480px) */
-	/*@media screen and (max-width: 767px) {#title{font-size: 100px;}}*/
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- <link rel="stylesheet" href="css/1.css"> -->
+	<!-- for IE to support ex. nav bar -->
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
 
-	/* Small devices (tablets, 768px and up) */
-	@media (min-width: 768px) and (max-width: 991px) 
-	{#title{font-size: 57px;} #sub-title{font-size: 25px;}}
-
- 	/*tablets/desktops and up ----------- */
-	@media (min-width: 992px) /*and (max-width: 1199px) */
-	{#title{font-size: 57px;} #sub-title{font-size: 25px;}}
-
-	/* large desktops and up ----------- */
-	/*@media screen and (min-width: 1200px) {}*/
-
- 	#title{
- 		/*padding-top: 130px;*/
- 		/*font-size: 57px;*/
- 		/*font-size: 4.5vw;*/
- 	}
- 	#sub-title{
- 		/*font-size: 25px;*/
- 		/*text-align: center;*/
- 	}
-
- 	#bg{
- 		background : linear-gradient(330deg,#EA3491,#673A92);
- 	}
-
- 	#fn{
- 		
- 	}
+	<link rel="stylesheet" href="css/2.css">
 
 
 
-
-</style>
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.js"
+	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous">
+</script>
+<script>
+	$(document).ready(function(){
+		var x = $(".fixed-top").height() ;
+      $(window).scroll(function() { // check if scroll event happened
+        if ($(document).scrollTop() > x) { // check if user scrolled more than 50 from top of the browser window
+          $(".fixed-top").css("background", "linear-gradient(330deg,#F4298F,#500E8F)"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+          $("#naav").css("padding-top", "4px");
+          $("#naav").css("padding-bottom", "4px");
+           // $("#naav").css("transition", "padding-bottom 0.2s");
+           // $("#naav").css("transition", "padding-top 0.2s");
+       } else {
+          $(".fixed-top").css("background", "transparent"); // if not, change it back to transparent
+          $("#naav").css("padding-top", "20px");
+          $("#naav").css("padding-bottom", "20px");
+      }
+  });
+  });
+</script>
 </head>
 <body>
-<div class="container-fluid p-0">
-	<div id="bg" class="container-fluid">
-		
-		<div class="pt-5 ">
-			<h1 id="title" class="text-center text-white w-100 pt-5 pb-4">Mobile App Landing Page Template</h1>
-		</div>
+	<div class="container-fluid p-0">
 
-		<div class="col-md-9 col-md-offset-4 mx-auto">
-			<p id="sub-title" class="text-white">The one and only solution for any kind of mobila app landing needs. Just change the screenshots and texts and you are good to go.</p>
-		</div>
-		
-			<img src="iiii.png" class="img-fluid mx-auto d-block" >
-		</div>
-			
-	<img src="client-logos.png" class="img-fluid mx-auto d-block mt-5">
+		<nav  class=" navbar navbar-expand-lg  fixed-top " id="naav" >
+			<a style="font-size: 24px; margin-left: 120px;" class="navbar-brand " href="#">MOB<b>APP</b></a>
+			<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span style="color: white;background: white;" class="navbar-toggler-icon"></span>
+				</button>
 
-</div>
- <script src="js/jquery.js"></script>
- <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+				<div class=" collapse navbar-collapse " id="navbarNavAltMarkup">
+					<div class="mx-2 ml-auto navbar-nav">
+						<a class="mx-2 nav-item nav-link active" href="#">HOME<span class="sr-only">(current)</span></a>
+						<a class="mx-2 nav-item nav-link" href="#">FEATURES</a>
+						<a class="mx-2 nav-item nav-link" href="#">GALLERY</a>
+						<a class="mx-2 nav-item nav-link" href="#">PRICING</a>
+						<a class="mx-2 nav-item nav-link" href="#">CONTACT</a>
+
+					</div>
+					<button id="navButton" class="px-3 btn btn-sm btn-outline-secondary" type="button">DOWNLOAD</button>
+				</div>
+			</nav>
+
+			<div id="bg" class="container-fluid">
+
+				<div class="pt-5 ">
+					<h1 id="title" class="text-center text-white w-100 pt-5 pb-4">Mobile App Landing Page Template</h1>
+				</div>
+
+				<div class="col-md-9 col-md-offset-4 mx-auto">
+					<p id="sub-title" class="text-center text-white">The one and only solution for any kind of mobila app landing needs. Just change the screenshots and texts and you are good to go.</p>
+				</div>
+				<img src="iiii.png" class="img-fluid mx-auto d-block" >
+			</div>
+
+			<img src="client-logos.png" class="img-fluid mx-auto d-block mt-5 mb-5">
+
+			<div style="background: #FAF6FB; color: #633991" class="pb-5">
+				<!-- HIGHLIGHTS &&& Features you love -->
+				<div class="pt-5">
+					<!-- <small>HIGHLIGHTS</small> -->
+					<p style="font-size: 12px;" class="text-muted text-center pt-5 mb-0">HIGHLIGHTS</p>
+					<h2 style="color: #633991" class="text-center font-weight-bold mb-5">
+					Features you love</h2>
+				</div>
+
+				<!-- the 3 card  -->
+				<div class="container">
+					<div class="row">
+						<div class="anim1 card col mt-2 mb-5 mr-4 flex-row justify-content-md-center">
+							<i class="gradiantIcon far fa-smile fa-3x mr-3 my-3"></i>
+							<div class="card-block my-3 ">
+								<h4>Simple</h4>
+								<p style="font-size: 15px;" class="card-subtitle text-muted mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque  </p>
+							</div>
+						</div>
+
+						<div class="anim1 card col mt-2 mb-5 flex-row justify-content-md-center">
+							<i class="gradiantIcon fas fa-cog fa-3x mr-3 my-3"></i>
+							<div class="card-block my-3 ">
+								<h4>customize</h4>
+								<p style="font-size: 15px;" class="card-subtitle text-muted mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque  </p>
+							</div>
+						</div>
+
+						<div class="anim1 card col mt-2 mb-5 ml-4 flex-row justify-content-md-center">
+							<i class="gradiantIcon fas fa-lock fa-3x mr-3  my-3 "></i>
+							<div class="card-block my-3 ">
+								<h4>secure</h4>
+								<p style="font-size: 15px;" class="card-subtitle text-muted mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque  </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+			<div class="container" id="iphoneBG" >
+				<div  class="col-lg-5 offset-lg-6 col-sm-12">
+					<i id="phoneICon" class="mt-5 mb-3 gradiantIcon fas fa-mobile-alt fa-3x"></i>
+					<!-- <i class="mt-5 mb-3 gradiantIcon fas fa-lock fa-3x border border-success"></i> -->
+					<h1 id="h3inDis">Discover our App</h1>
+					<p style="color: #633991">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati vel exercitationem eveniet vero maxime ratione</p>
+					<button id="btn1" class="btn">READ MORE</button>
+				</div>
+			</div>
+
+
+
+			<div id="bgForDo" class="pt-5">
+				<div class="pt-5 text-center">
+					<p class="mb-0">FEATURES</p>
+					<h1 class="">Do more with our app</h1>
+				</div>
+
+				<div class="mt-5 container  p-0 bg-white">
+					<ul class=" nav nav-tabs ">
+						<li class=" nav-item ">
+							<a href="#aa" class="nav-link active py-3 lii " data-toggle="tab">Communication</a>
+						</li>
+
+						<li class=" nav-item ">
+							<a href="#bb" id="liii" class="nav-link py-3 lii " data-toggle="tab">Scheduling</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="#cc" id="liii" class="nav-link py-3 lii " data-toggle="tab">Messages</a>
+						</li>
+
+						<li class="nav-item ">
+							<a href="#dd" class="nav-link py-3 lii " data-toggle="tab">Live Chat</a>
+						</li>
+					</ul>
+
+					<div class="tab-content ">
+						<div class="tab-pane fade show active " id="aa">
+							<div class="row">
+								<div class="col-md-auto m-5 pr-0">
+									<img src="graphic.png">
+								</div>
+								<div class="col-8 mr-5 my-5 pl-0">
+									<h1>Communicate with ease</h1>
+									<p style="font-size: 18px; color: #EA9AB7;" class="pt-2 pb-4">Uniquely underwhelm premium outsourcing with proactive leadership skills.</p>
+									<p style="line-height: 30px;" class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,</p>
+									<p style="line-height: 30px;" class="text-muted">malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.</p>
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="tab-pane fade" id="bb">
+							<div class="row">
+
+								<div class="col-8 ml-5 my-5 pr-0">
+									<h1>Scheduling when you want</h1>
+									<p style="font-size: 18px; color: #EA9AB7" class="pt-2 pb-4">Uniquely underwhelm premium outsourcing with proactive leadership skills.</p>
+									<p style="line-height: 30px;" class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,</p>
+									<p style="line-height: 30px;" class="text-muted">malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.</p>
+								</div>
+								<div class="col-md-auto m-5 pl-0">
+									<img src="graphic.png">
+								</div>
+							</div>
+						</div>
+
+
+						<div class="tab-pane fade" id="cc">
+							<div class="row">
+								<div class="col-md-auto m-5 pr-0">
+									<img src="graphic.png">
+								</div>
+								<div class="col-8 mr-5 my-5 pl-0">
+									<h1>Realtime Messaging service</h1>
+									<p style="font-size: 18px; color: #EA9AB7;" class="pt-2 pb-4">Uniquely underwhelm premium outsourcing with proactive leadership skills.</p>
+									<p style="line-height: 30px;" class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,</p>
+									<p style="line-height: 30px;" class="text-muted">malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.</p>
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="tab-pane fade" id="dd">
+							<div class="row">
+
+								<div class="col-8 ml-5 my-5 pr-0">
+									<h1>Live chat when you needed</h1>
+									<p style="font-size: 18px; color: #EA9AB7" class="pt-2 pb-4">Uniquely underwhelm premium outsourcing with proactive leadership skills.</p>
+									<p style="line-height: 30px;" class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,</p>
+									<p style="line-height: 30px;" class="text-muted">malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.</p>
+								</div>
+								<div class="col-md-auto m-5 pl-0">
+									<img src="graphic.png">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="container pb-5">
+				<div class="d-flex flex-row row">
+
+					<div class="col">
+						<img src="dualphone.png">
+					</div>
+
+					<div class="d-flex flex-column justify-content-center col">
+						<i id="phoneICon2" class="gradiantIcon fas fa-mobile-alt fa-3x"></i>
+						<h1 id="h3inDis">Launch your App</h1>
+						<p class="text-muted py-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati vel exercitationem eveniet vero maxime ratione</p>
+						<button id="btn1" class="btn">READ MORE</button>
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+
+			<!-- font-weight:300 -->
+
+			<div id="mdibg" class="media my-5 pr-5  ">
+				<div class="media-body">
+					<ul class="m-5">
+
+						<div style="border-bottom: solid 0.5px #F8E3F0;" class="media m-5 pb-4">
+							<div class="ballTR text-center">1</div>
+							<li class="media-body ml-4">
+								<div class="aa">
+									<h3 class="mb-3">Create an Account</h3>
+									<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem</p>
+								</div>
+							</li>
+						</div>
+
+						<div style="border-bottom: solid 0.5px #F8E3F0;" class="media m-5 pb-4">
+							<div class="ballTR text-center">2</div>
+							<li class="media-body ml-4 ">
+								<div class="">
+									<h3 class="mb-3">Share with friends</h3>
+									<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem</p>
+								</div>
+							</li>
+						</div>
+						<div class="media m-5">
+							<div class="ballTR text-center">3</div>
+							<li class="media-body ml-4">
+								<div class="">
+									<h3 class="mb-3">Enjoy your life</h3>
+									<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium obcaecati vel exercitationem</p>
+								</div>
+							</li>
+						</div>
+
+					</ul>
+				</div>
+				<img class="d-flex mr-5" src="iphonex.png" width="27%">
+			</div>
+
+
+
+
+			<!-- <div style="height: 500px;background: tomato " class="mt-5"></div> -->
+
+<div class="border border-success">aaaa</div>
+
+		</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+	</html>
